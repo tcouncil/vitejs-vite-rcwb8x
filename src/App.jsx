@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Switch, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Landing from './Common/Landing';
 import Footer from './Common/Footer';
 import './App.css'
@@ -10,12 +10,9 @@ function App() {
   return (
     <>
       <div className='app container'>
-        <Switch>
-          <Route>
-            <Landing />
-            <Footer />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+        </Routes>
       </div>
     </>
   )

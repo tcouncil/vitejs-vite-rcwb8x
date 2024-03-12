@@ -1,42 +1,283 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+body {
+  background-image: url('https://cdn.discordapp.com/attachments/1114553047763386421/1216979555873591356/00005-3460469419.png?ex=66025b88&is=65efe688&hm=6f844b7cdb7e2aa3ec72285d00431071861be1895efe8d9478f09367d45b57e7&');
+
+  -webkit-animation: slidein 100s;
+  animation: slidein 100s;
+
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
+@-webkit-keyframes slidein {
   from {
-    transform: rotate(0deg);
+    background-position: top;
+    background: size 128px;
   }
+
   to {
-    transform: rotate(360deg);
+    background-position: -100px 0px;
+    background-size: 256px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 128px;
+  }
+
+  to {
+    background-position: -256px 0px;
+    background-size: 256px;
+  }
+
+}
+
+
+.landing {
+  color: #d6c877;
+  text-shadow: 2px 2px #251d1a;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #a3dbeeb4;
+  text-align: center;
+  font-size: calc(7px + 1vmin);
+  font-family: 'Roboto', sans-serif;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background: rgba(5, 5, 19, 0.849);
+  margin-top: 2px;
+}
+
+.landing p {
+  padding: 0;
+}
+
+#landing-hr {
+  margin-top: 0;
+  margin-bottom: 2px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(84, 240, 92, 0.75), rgba(255, 255, 255, 0)) !important;
+
+}
+
+.landing-title {
+  display: flex;
+  justify-content: center;
+}
+.landing-header{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  
+}
+.landing-header p{
+  padding-left: 12px;
+  padding-right: 7%;
+  color: rgb(255, 252, 204);
+}
+
+
+
+.landing-card {
+  background-image: linear-gradient(-90deg, #070c16f6 0%, #0f0c2be8 100%);
+  padding: 0;
+}
+
+.landing h1 {
+  font-family: 'Philosopher', sans-serif;
+  color: #ebf3f7 !important;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.landing h5 {
+  font-family: 'Philosopher', sans-serif;
+  color: #a6ddf8 !important;
+}
+
+span:nth-child(1) {
+  filter: blur(5px);
+}
+
+span:nth-child(2) {
+  filter: blur(10px);
+}
+
+span:nth-child(3) {
+  filter: blur(25px);
+}
+
+span:nth-child(4) {
+  filter: blur(150px);
+}
+
+
+@keyframes rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
   }
 }
 
-.card {
-  padding: 2em;
+header a {
+  font-style: normal;
 }
 
-.read-the-docs {
-  color: #888;
+.portrait {
+  height: 23vh;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+.button {
+  background-color: #29211f;
+  color: #b1ecff;
+  text-shadow: 0px 0px #7a5b5100;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #a3dbeeb4;
+  font-family: 'Roboto', sans-serif;
+  border: #5B7A51 1px solid;
+  border-radius: 5px;
+  margin: 3px;
+  padding: 3px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #201a19;
+  color: #cef3ff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #a3dbee;
+  font-family: 'Roboto', sans-serif;
+  border: #97c289 1px solid;
+  border-radius: 4px;
+}
+
+.projects-group {
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: #b1ecff;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #a3dbeeb4;
+  border: #00000060 1px solid;
+  border-radius: 1px;
+  background-color: rgba(0, 0, 0, 0.39);
+  margin-left: 50px;
+}
+
+
+.projects-group img {
+  max-width: 50%;
+  width: 100%;
+}
+
+.projects-group div {
+  align-items: center;
+}
+
+.project-card {
+  text-align: center;
+  flex: 1;
+  border: #00000060 1px solid;
+  border-radius: 1px;
+  background-color: rgba(0, 0, 0, 0.39);
+  margin-left: auto;
+}
+
+.project-card img {
+  border-color: rgba(0, 0, 0, 0.021);
+  border-style: solid;
+  border-radius: 1%;
+}
+
+.project-d{
+  max-width: 82%;
+  text-align: left;
+  margin: 3%;
+}
+
+.project-d p{
+  margin-top: -16px;
+  text-align: left;
+  color:  rgb(255, 252, 204);
+}
+
+
+.project-img{
+  margin-top: 16px;
+  margin-right: 2%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-family: 'Philosopher', sans-serif;
+  color: #b1ecff;
+  text-shadow: 2px 2px #7A5B51;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #a3dbeeb4;
+  font-size: calc(10px + 4vmin);
+  margin-left: 5vw;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5vw;
+}
+
+.contactForm {
+  justify-content: center;
+  text-align: center;
+  color: #b1ecff;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #a3dbeeb4;
+  padding: 0;
+}
+
+.contactFormBorder {
+  border: #00000060 1px solid;
+  border-radius: 1px;
+  background-color: rgba(0, 0, 0, 0.39);
+}
+
+form input,
+form textarea {
+  min-width: 88%;
+  margin-bottom: 3px !important;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgb(255, 255, 255), rgba(0, 0, 0, 0.1));
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+@media all and (max-width: 700px) {
+  .landing-name-pic {
+    flex-direction: column;
+  }
+
+  .projects-group {
+    flex-direction: column;
+  }
 }
